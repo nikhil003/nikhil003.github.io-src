@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Nikhil Garg'
 SITENAME = u'Personal Space'
-SITEURL = ''
+SITEURL = 'http://nikhil003.github.io'
 
 PATH = 'content'
 
@@ -35,7 +35,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
 # }
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
