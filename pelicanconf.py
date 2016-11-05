@@ -35,6 +35,10 @@ SOCIAL = (('You can add links in your config file', '#'),
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
 # }
 
+PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
+PLUGINS = ['extract_toc','render_math','better_figures_and_images']
+MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
+
 DEFAULT_PAGINATION = 2
 
 ARTICLE_URL = '{slug}/'

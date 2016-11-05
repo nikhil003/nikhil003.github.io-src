@@ -22,3 +22,7 @@ DELETE_OUTPUT_DIRECTORY = False
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
+THEME='/Users/nikhil/Documents/pelican_theme/bootlex'
+PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
+PLUGINS = ['extract_toc','render_math','better_figures_and_images']
+MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
