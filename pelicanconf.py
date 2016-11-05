@@ -35,7 +35,11 @@ SOCIAL = (('You can add links in your config file', '#'),
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
 # }
 
-DEFAULT_PAGINATION = True
+DEFAULT_PAGINATION = 2
 
+ARTICLE_URL = '{slug}/'
+ARTICLE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
