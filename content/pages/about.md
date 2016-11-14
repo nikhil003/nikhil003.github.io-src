@@ -7,4 +7,4 @@ I am a doctoral student in School of Mechanical and Aerospace Engineering, Nanya
 
 Previously, I have worked at Energy Research Insitute, Nanyang Technological University as a Research Associate, where I worked on modelling wind resource in Singapore.
 
-I have also worked as a Visiting Research at Department of Mechanical Engineering, University of Auckland while working on my Masters in Mechanical Engineering.
+I have also worked as a visiting researcher at Department of Mechanical Engineering, University of Auckland while working on my Masters in Mechanical Engineering.
