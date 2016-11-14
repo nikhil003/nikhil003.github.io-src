@@ -1,5 +1,5 @@
 Title: First Notebook
-Slug: first_notebook
+Slug: first-notebook
 Date: 2016-11-14 18:59:27
 Category: Tutorial
 Tags: notebooks
