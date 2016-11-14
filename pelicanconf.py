@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
 
 AUTHOR = u'Nikhil Garg'
 SITENAME = u'Personal Space'
@@ -18,7 +19,10 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-THEME='/Users/nikhil/Documents/pelican_theme/bootlex'
+if os.name == 'nt':
+    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\bootlex'
+else:
+    THEME='/Users/nikhil/Documents/pelican_theme/bootlex'
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
@@ -34,16 +38,24 @@ SOCIAL = (('You can add links in your config file', '#'),
 #     'extra/robots.txt': {'path': 'robots.txt'},
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
 # }
-
-PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
+if os.name == 'nt':
+    PLUGIN_PATHS = ['C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-plugins']
+else:
+    PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
 PLUGINS = ['extract_toc','render_math','better_figures_and_images']
 MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
 
 DEFAULT_PAGINATION = 2
 
-ARTICLE_URL = '{slug}/'
-ARTICLE_SAVE_AS = '{slug}/index.html'
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
+if os.name == 'nt':
+    ARTICLE_URL = '{slug}\\'
+    ARTICLE_SAVE_AS = '{slug}\\index.html'
+    PAGE_URL = '{slug}\\'
+    PAGE_SAVE_AS = '{slug}\\index.html'
+else:
+    ARTICLE_URL = '{slug}/'
+    ARTICLE_SAVE_AS = '{slug}/index.html'
+    PAGE_URL = '{slug}/'
+    PAGE_SAVE_AS = '{slug}/index.html'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
