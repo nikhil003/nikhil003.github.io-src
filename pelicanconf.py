@@ -27,15 +27,17 @@ else:
     TAG_FEED_ATOM = 'feeds/tags/%s.atom.xml'
 
 if os.name == 'nt':
-    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\aboutwilson'
+    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\pelican-bootstrap3'
 else:
-    THEME='/Users/nikhil/Documents/pelican_theme/aboutwilson'
+    THEME='/Users/nikhil/Documents/pelican_theme/pelican-bootstrap3'
 # Blogroll
 
 LINKS = ()
 
 # Social widget
 SOCIAL = ()
+
+MARKUP = ('md',)
 
 # STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
 # EXTRA_PATH_METADATA = {
@@ -47,12 +49,14 @@ if os.name == 'nt':
 else:
     PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
 
-#PLUGINS = ['extract_toc','render_math','better_figures_and_images']
+PLUGINS = ['extract_toc','render_math','liquid_tags.notebook','liquid_tags.img']
 
 MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra','toc']
-
+NOTEBOOK_DIR = 'notebooks'
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 PAGE_PATHS = ['pages',]
+IGNORE_FILES = ['.ipynb_checkpoints']
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
