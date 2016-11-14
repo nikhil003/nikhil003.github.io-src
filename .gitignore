@@ -1,1 +1,9 @@
-*.pyc
+#Custom
+output
+
+#Python
+*.py[cod]
+
+#C extensions
+*.so
+*.lib
