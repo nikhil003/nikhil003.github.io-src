@@ -27,9 +27,9 @@ else:
     TAG_FEED_ATOM = 'feeds/tags/%s.atom.xml'
 
 if os.name == 'nt':
-    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\aboutwilson'
+    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\bootstrap2'
 else:
-    THEME='/Users/nikhil/Documents/pelican_theme/aboutwilson'
+    THEME='/Users/nikhil/Documents/pelican_theme/bootstrap2'
 # Blogroll
 
 LINKS = ()
