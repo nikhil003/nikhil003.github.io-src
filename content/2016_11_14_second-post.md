@@ -1,8 +1,9 @@
-Title:Second post
-
-Date: 2016-11-14 20:34
+Title:Second-Post
+Date: 2016-11-14
 Tags:
-Category:
+Category:MySpace
 Slug: second-post
 Summary:
-Status: draft
+Author: Nikhil Garg
+
+post goes here

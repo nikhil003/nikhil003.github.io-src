@@ -3,19 +3,19 @@ from datetime import datetime
 
 TEMPLATE = """
 Title:{title}
-
-Date: {year}-{month}-{day} {hour}:{minute:02d}
+Date: {year}-{month}-{day}
 Tags:
-Category:
+Category:{category}
 Slug: {slug}
 Summary:
-Status: draft
+Author: Nikhil Garg
 
+post goes here
 
 """
 
 
-def make_entry(title):
+def make_entry(title, category):
     today = datetime.today()
     slug = title.lower().strip().replace(' ', '-')
     f_create = "content/{}_{:0>2}_{:0>2}_{}.md".format(
@@ -24,9 +24,8 @@ def make_entry(title):
                                 year=today.year,
                                 month=today.month,
                                 day=today.day,
-                                hour=today.hour,
-                                minute=today.minute,
-                                slug=slug)
+                                slug=slug,
+                                category=category)
     with open(f_create, 'w') as w:
         w.write(t)
     print("File created -> " + f_create)
@@ -35,6 +34,6 @@ def make_entry(title):
 if __name__ == '__main__':
 
     if len(sys.argv) > 1:
-        make_entry(sys.argv[1])
+        make_entry(sys.argv[1], sys.argv[2])
     else:
         print "No title given"
