@@ -26,6 +26,14 @@ else:
     CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
     TAG_FEED_ATOM = 'feeds/tags/%s.atom.xml'
 
+DISPLAY_RECENT_POSTS_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_TAGS_ON_MENU = False
+EXPAND_LATEST_ON_INDEX = True
+USE_FOLDER_AS_CATEGORY = True
+DEFAULT_DATE = 'fs'
+
 if os.name == 'nt':
     THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\bootstrap2'
 else:
@@ -39,7 +47,7 @@ SOCIAL = ()
 
 MARKUP = ('md',)
 
-# STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
+#STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
 # EXTRA_PATH_METADATA = {
 #     'extra/robots.txt': {'path': 'robots.txt'},
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
@@ -49,7 +57,7 @@ if os.name == 'nt':
 else:
     PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
 
-PLUGINS = ['extract_toc','render_math','liquid_tags.notebook','liquid_tags.img']
+PLUGINS = ['sitemap','extract_toc','render_math','liquid_tags.notebook','liquid_tags.img']
 
 MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra','toc']
 NOTEBOOK_DIR = 'notebooks'
