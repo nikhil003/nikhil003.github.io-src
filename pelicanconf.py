@@ -12,24 +12,30 @@ PATH = 'content'
 TIMEZONE = 'Asia/Singapore'
 
 DEFAULT_LANG = u'en'
+DEFAULT_DATE_FORMAT = ('%B %d %Y')
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_DOMAIN = SITEURL
 TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+if os.name == 'nt':
+    FEED_ALL_ATOM = 'feeds\\all.atom.xml'
+    CATEGORY_FEED_ATOM = 'feeds\\%s.atom.xml'
+    TAG_FEED_ATOM = 'feeds\\tags\\%s.atom.xml'
+else:
+    FEED_ALL_ATOM = 'feeds/all.atom.xml'
+    CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+    TAG_FEED_ATOM = 'feeds/tags/%s.atom.xml'
+
 if os.name == 'nt':
     THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\aboutwilson'
 else:
     THEME='/Users/nikhil/Documents/pelican_theme/aboutwilson'
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('You can modify those links in your config file', '#'),)
+
+LINKS = ()
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = ()
 
 # STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.ico']
 # EXTRA_PATH_METADATA = {
@@ -40,20 +46,13 @@ if os.name == 'nt':
     PLUGIN_PATHS = ['C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-plugins']
 else:
     PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
-PLUGINS = ['extract_toc','render_math','better_figures_and_images']
-MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
 
-DEFAULT_PAGINATION = 2
+#PLUGINS = ['extract_toc','render_math','better_figures_and_images']
 
-if os.name == 'nt':
-    ARTICLE_URL = '{slug}\\'
-    ARTICLE_SAVE_AS = '{slug}\\index.html'
-    PAGE_URL = '{slug}\\'
-    PAGE_SAVE_AS = '{slug}\\index.html'
-else:
-    ARTICLE_URL = '{slug}/'
-    ARTICLE_SAVE_AS = '{slug}/index.html'
-    PAGE_URL = '{slug}/'
-    PAGE_SAVE_AS = '{slug}/index.html'
+MD_EXTENSIONS = ['codehilite(css_class=highlight)','extra','toc']
+
+DEFAULT_PAGINATION = 10
+
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
+PAGE_PATHS = ['pages',]

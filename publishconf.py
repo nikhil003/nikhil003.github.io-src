@@ -26,12 +26,3 @@ DELETE_OUTPUT_DIRECTORY = False
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
-if os.name == 'nt':
-    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\aboutwilson'
-    PLUGIN_PATHS = ['C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-plugins']
-else:
-    THEME='/Users/nikhil/Documents/pelican_theme/aboutwilson'
-    PLUGIN_PATHS = ['/Users/nikhil/Documents/pelican_plugins']
-
-PLUGINS = ['extract_toc','render_math','better_figures_and_images']
-MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
