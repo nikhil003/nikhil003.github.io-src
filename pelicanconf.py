@@ -35,9 +35,9 @@ USE_FOLDER_AS_CATEGORY = True
 DEFAULT_DATE = 'fs'
 
 if os.name == 'nt':
-    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\bootstrap2'
+    THEME = 'C:\\Users\\Nikhil\\Documents\\python_setup\\pelican\\pelican-themes\\new-bootstrap2'
 else:
-    THEME='/Users/nikhil/Documents/pelican_theme/bootstrap2'
+    THEME='/Users/nikhil/Documents/pelican_theme/new-bootstrap2'
 # Blogroll
 
 LINKS = ()
